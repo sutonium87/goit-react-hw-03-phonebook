@@ -1,6 +1,9 @@
 // Import the React library to create a React component.
 import React from 'react';
 
+// Import the CSS module
+import styles from './ContactForm.module.css';
+
 // Define a functional component called ContactForm that takes four props:
 // - name: the name input value
 // - number: the number input value
@@ -9,7 +12,7 @@ import React from 'react';
 const ContactForm = ({ name, number, handleChange, handleSubmit }) => {
   return (
     // Create a form element with an onSubmit event handler that calls the handleSubmit function when the form is submitted.
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles['form-container']}>
       <label>
         Name:
         <input
@@ -20,7 +23,7 @@ const ContactForm = ({ name, number, handleChange, handleSubmit }) => {
           // - title: tooltip text to describe the input format
           // - required: make the input required
           // - value: bind the value to the 'name' prop
-          // - onChange: call the handleChange function when the input value changes
+          // - onChange: call the handleChange function when the i
           type="text"
           name="name"
           pattern="^[a-zA-Z]+(([' -][a-zA-Z ])?[a-zA-Z]*)*$"
@@ -29,6 +32,7 @@ const ContactForm = ({ name, number, handleChange, handleSubmit }) => {
           value={name}
           onChange={handleChange}
         />
+        <span>(e.g., John Doe)</span>
       </label>
       <label>
         Number:
@@ -49,6 +53,7 @@ const ContactForm = ({ name, number, handleChange, handleSubmit }) => {
           value={number}
           onChange={handleChange}
         />
+        <span>(e.g., +1 123-456-7890)</span>
       </label>
       {/* Create a submit button for the form */}
       <button type="submit">Add Contact</button>
@@ -56,8 +61,4 @@ const ContactForm = ({ name, number, handleChange, handleSubmit }) => {
   );
 };
 
-// Export the ContactForm component as the default export of this module.
 export default ContactForm;
-
-// This module defines a React component called ContactForm that renders a form with input fields for a contact's name and number.
-// It also includes regular expressions and tooltips to validate and guide user input.The component uses props for the input values, change handling, and form submission.

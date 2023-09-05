@@ -1,0 +1,21 @@
+/* Filter.module.css */
+
+/* Style the filter container */
+.filterContainer {
+  margin-bottom: 20px;
+}
+
+/* Style the filter label */
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the filter input field */
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

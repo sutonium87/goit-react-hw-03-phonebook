@@ -1,0 +1,57 @@
+/* ContactForm.module.css */
+
+/* Style the form container */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Style the input fields */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the submit button */
+button[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+input:invalid {
+  border-color: #007bff;
+}
+
+/* Style tooltips */
+input:invalid + span {
+  display: inline-block;
+  margin-left: 5px;
+  color: grey;
+  font-size: 14px;
+}
